@@ -9,9 +9,7 @@ export function Campaign() {
         <Text style={styles.campaignTitleTxt}>Build a Mosque</Text>
         <Text style={styles.campaignTitleStatus}>New Campaign</Text>
       </View>
-      <ScrollView>
-        <Card />
-      </ScrollView>
+      <Card />
     </>
   );
 }

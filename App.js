@@ -18,7 +18,9 @@ export default function App() {
         <SafeAreaView style={styles.root}>
           <View style={styles.body}>
             <Overview />
-            <Campaign />
+            <ScrollView>
+              <Campaign />
+            </ScrollView>
           </View>
         </SafeAreaView>
       </SafeAreaProvider>
