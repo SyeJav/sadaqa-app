@@ -26,7 +26,6 @@ export const styles = StyleSheet.create({
   },
   headerSubTxt: {
     fontWeight: "bold",
-    color: "olive",
   },
   body: {
     flex: 5,

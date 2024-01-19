@@ -3,16 +3,18 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   campaignTitle: {
     padding: 5,
-    flexDirection: "row",
-    alignItems: "center",
+    flexDirection: "column",
+    alignItems: "flex-start",
     justifyContent: "space-between",
+    paddingTop: 20,
   },
   campaignTitleTxt: {
     fontSize: 20,
     fontWeight: "bold",
+    color: "#4AA567",
   },
   campaignTitleStatus: {
-    fontSize: 10,
+    fontSize: 15,
     fontWeight: "bold",
   },
 });

@@ -1,15 +1,17 @@
 import { Image, Text, TouchableOpacity, View } from "react-native";
-import { styles } from "./Card.style";
+import { cardStyles } from "./Card.style";
 import mosq1 from "../../assets/mosq1.jpg";
 
-export function Card() {
+export function Card({ campaign }) {
   return (
-    <TouchableOpacity style={styles.root}>
-      <Image style={styles.img} source={mosq1}></Image>
-      <View style={styles.body}>
-        <Text style={styles.cardTitle}></Text>
-        <Text style={styles.cardSubTxt}></Text>
-        <Text style={styles.cardFooter}></Text>
+    <TouchableOpacity style={cardStyles.card}>
+      <Image style={cardStyles.img} source={mosq1}></Image>
+      <View style={cardStyles.body}>
+        <Text style={cardStyles.cardTitle}>{campaign.title}</Text>
+        <Text style={cardStyles.cardSubTitle}>{campaign.subTitle}</Text>
+        <Text style={cardStyles.cardSubTxt}>{campaign.description}</Text>
+
+        <Text style={cardStyles.cardFooter}></Text>
       </View>
     </TouchableOpacity>
   );
