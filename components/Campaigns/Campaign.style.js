@@ -7,6 +7,7 @@ export const styles = StyleSheet.create({
     alignItems: "flex-start",
     justifyContent: "space-between",
     paddingTop: 20,
+    paddingBottom: 10,
   },
   campaignTitleTxt: {
     fontSize: 20,

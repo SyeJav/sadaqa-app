@@ -1,9 +1,8 @@
-import { ScrollView, Text, View } from "react-native";
+import { View } from "react-native";
 import { styles } from "./App.style";
-import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
-import { Overview } from "./components/Overview/Overview";
-import { Campaign } from "./components/Campaign/Campaign";
-import { Footer } from "./components/Footer/Footer";
+import { Footer } from "./components/Home/Footer/Footer";
+import { HeaderArea } from "./components/Home/Header/Header";
+import { BodyArea } from "./components/Home/Body/Body";
 import { useState } from "react";
 
 export default function App() {
@@ -20,8 +19,8 @@ export default function App() {
     },
     {
       id: 2,
-      title: "Land purchase for Madrasa",
-      subTitle: "Guntur",
+      title: "Help to build Gaza",
+      subTitle: "Gaza",
       description:
         "Rajak sat on the porch of his wooden house in Kampung Dupa, a small village nestled in the heart of Desa Compang Soba, surrounded by the lush landscapes of Kecamatan Elar in Kabupaten Manggarai Timur, East  Nusa Tenggara, Indonesia. He pondered his communitys shared dream: to have their own mosque.",
       type: "Urgent",
@@ -50,32 +49,11 @@ export default function App() {
     },
   ]);
 
-  function renderCampaignsList() {
-    return campaignsList.map((campaign) => (
-      <Campaign key={campaign.id} campaign={campaign} />
-    ));
-  }
-
   return (
     <>
-      <View style={styles.header}>
-        <Text style={styles.headerTxt}>KALB</Text>
-        <Text style={[styles.headerSubTxt, (paddingTop = 20)]}>
-          “Sadaqah extinguishes sin as water extinguishes fire”
-        </Text>
-        <Text style={styles.headerSubTxt}>(hadith, Tirmidhi)</Text>
-      </View>
-      <SafeAreaProvider>
-        <SafeAreaView style={styles.root}>
-          <View style={styles.body}>
-            <Overview />
-            <ScrollView>{renderCampaignsList()}</ScrollView>
-          </View>
-        </SafeAreaView>
-      </SafeAreaProvider>
-      <View style={styles.footer}>
-        <Footer />
-      </View>
+      <HeaderArea />
+      <BodyArea campaigns={campaignsList} />
+      <Footer />
     </>
   );
 }

@@ -25,8 +25,12 @@ export const cardStyles = StyleSheet.create({
 
   cardSubTxt: {
     paddingTop: 15,
+    paddingBottom: 10,
     fontSize: 15,
   },
 
-  cardFooter: {},
+  cardFooter: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
 });

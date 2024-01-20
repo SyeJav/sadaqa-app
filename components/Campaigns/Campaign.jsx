@@ -1,6 +1,6 @@
-import { Card } from "../Card/Card";
+import { Card } from "../Cards/Card";
 import { styles } from "./Campaign.style";
-import { cardStyles } from "../Card/Card.style";
+import { cardStyles } from "../Cards/Card.style";
 import { ScrollView, Text, View } from "react-native";
 
 export function Campaign({ campaign }) {
