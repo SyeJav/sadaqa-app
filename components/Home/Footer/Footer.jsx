@@ -23,7 +23,8 @@ export function Footer() {
       <TouchableOpacity>
         <Entypo name="new-message" size={24} color="#4AA567" />
       </TouchableOpacity>
-      <TouchableOpacity onPress={goToSearch}>
+      <TouchableOpacity>
+        {goToSearch()}
         <FontAwesome5 name="search" size={24} color="#4AA567" />
       </TouchableOpacity>
       <TouchableOpacity>
