@@ -1,9 +1,13 @@
-import { View } from "react-native";
+import { SafeAreaView, View } from "react-native";
 import { styles } from "./App.style";
-import { Footer } from "./components/Home/Footer/Footer";
-import { HeaderArea } from "./components/Home/Header/Header";
-import { BodyArea } from "./components/Home/Body/Body";
 import { useState } from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+import { Login } from "./Pages/Login/Login";
+import { Home } from "./Pages/Home/Home";
+import { Search } from "./Pages/Search/Search";
+import { User } from "./Pages/Accounts/User";
 
 export default function App() {
   const [campaignsList, setCampaignsList] = useState([
@@ -49,11 +53,24 @@ export default function App() {
     },
   ]);
 
+  const Stack = createNativeStackNavigator();
+  const navTheme = {
+    colors: {
+      background: "transparent",
+    },
+  };
+
   return (
-    <>
-      <HeaderArea />
-      <BodyArea campaigns={campaignsList} />
-      <Footer />
-    </>
+    <NavigationContainer>
+      <Stack.Navigator
+        initialRouteName="login"
+        screenOptions={{ headerShown: false, animation: "fade" }}
+      >
+        <Stack.Screen name="login" component={Login} />
+        <Stack.Screen name="home" component={Home} />
+        <Stack.Screen name="search" component={Search} />
+        <Stack.Screen name="user" component={User} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
