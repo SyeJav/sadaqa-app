@@ -1,7 +1,7 @@
 import { bodyStyles } from "./Body.style";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { Overview } from "./Overview/Overview";
-import { Campaign } from "../../Campaigns/Campaign";
+import { Campaign } from "../Campaigns/Campaign";
 import { ScrollView, View } from "react-native";
 
 export function BodyArea({ campaigns }) {

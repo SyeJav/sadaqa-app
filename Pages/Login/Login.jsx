@@ -2,17 +2,17 @@ import { Text, TextInput, TouchableOpacity, View } from "react-native";
 import { s } from "./Login.style";
 import { Input } from "../../components/Input/Input";
 
-export function Login() {
+export function Login({ navigation }) {
   const onPressLogin = () => {
-    alert("login");
+    navigation.navigate("home");
   };
   const onPressForgotPassword = () => {
     // Do something about forgot password operation
-    alert("password forgot");
+    navigation.navigate("forgotpassword");
   };
   const onPressSignUp = () => {
     // Do something about signup operation
-    alert("signup");
+    navigation.navigate("signup");
   };
   return (
     <View style={s.root}>

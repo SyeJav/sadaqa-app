@@ -5,6 +5,8 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { Login } from "./Pages/Login/Login";
+import { ForgotPassword } from "./Pages/Login/ForgotPassword";
+import { Signup } from "./Pages/Login/Signup";
 import { Home } from "./Pages/Home/Home";
 import { Search } from "./Pages/Search/Search";
 import { User } from "./Pages/Accounts/User";
@@ -67,9 +69,15 @@ export default function App() {
         screenOptions={{ headerShown: false, animation: "fade" }}
       >
         <Stack.Screen name="login" component={Login} />
-        <Stack.Screen name="home" component={Home} />
-        <Stack.Screen name="search" component={Search} />
+        <Stack.Screen name="home">
+          {() => <Home campaigns={campaignsList} />}
+        </Stack.Screen>
+        <Stack.Screen name="search">
+          {() => <Search campaigns={campaignsList} />}
+        </Stack.Screen>
         <Stack.Screen name="user" component={User} />
+        <Stack.Screen name="forgotpassword" component={ForgotPassword} />
+        <Stack.Screen name="signup" component={Signup} />
       </Stack.Navigator>
     </NavigationContainer>
   );

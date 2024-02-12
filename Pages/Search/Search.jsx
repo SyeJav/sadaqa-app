@@ -1,17 +1,17 @@
 import { Text, View } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { searchStyles } from "./Search.style";
+import { BodyArea } from "../../components/Body/Body";
+import { Footer } from "../../components/Footer/Footer";
+import { HeaderArea } from "../../components/Header/Header";
+import { SearchBody } from "../../components/Body/Search/SearchBodyArea";
 
-export function Search() {
+export function Search({ campaigns }) {
   return (
-    <SafeAreaProvider>
-      <SafeAreaView style={searchStyles.root}>
-        <View>
-          <Text>
-            Welcome to search fsvf ef ef vefe e ef e frfbrehyt heht etyt jujt
-          </Text>
-        </View>
-      </SafeAreaView>
-    </SafeAreaProvider>
+    <>
+      <HeaderArea />
+      <SearchBody campaigns={campaigns} />
+      <Footer />
+    </>
   );
 }

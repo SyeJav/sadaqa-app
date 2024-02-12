@@ -2,16 +2,10 @@ import { TouchableOpacity, View } from "react-native";
 import { footerStyles } from "./Footer.style";
 import { Entypo } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
-import { Search } from "../../Search/Search";
+import { navigation, useNavigation } from "@react-navigation/native";
 
 export function Footer() {
-  function goToSearch() {
-    return (
-      <View>
-        <Search />
-      </View>
-    );
-  }
+  const navigation = useNavigation();
   return (
     <View style={footerStyles.root}>
       <TouchableOpacity>
@@ -23,8 +17,7 @@ export function Footer() {
       <TouchableOpacity>
         <Entypo name="new-message" size={24} color="#4AA567" />
       </TouchableOpacity>
-      <TouchableOpacity>
-        {goToSearch()}
+      <TouchableOpacity onPress={() => navigation.navigate("search")}>
         <FontAwesome5 name="search" size={24} color="#4AA567" />
       </TouchableOpacity>
       <TouchableOpacity>
