@@ -5,13 +5,16 @@ import { BodyArea } from "../../components/Body/Body";
 import { Footer } from "../../components/Footer/Footer";
 import { HeaderArea } from "../../components/Header/Header";
 import { SearchBody } from "../../components/Body/Search/SearchBodyArea";
+import { base } from "../../components/Root/Root.style";
 
 export function Search({ campaigns }) {
   return (
-    <>
-      <HeaderArea />
-      <SearchBody campaigns={campaigns} />
-      <Footer />
-    </>
+    <SafeAreaProvider>
+      <SafeAreaView style={base.container}>
+        <HeaderArea />
+        <SearchBody campaigns={campaigns} />
+        <Footer />
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 }

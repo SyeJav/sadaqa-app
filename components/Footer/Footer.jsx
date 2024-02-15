@@ -8,10 +8,10 @@ export function Footer() {
   const navigation = useNavigation();
   return (
     <View style={footerStyles.root}>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate("home")}>
         <Entypo name="home" size={24} color="#4AA567" />
       </TouchableOpacity>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate("favorite")}>
         <Entypo name="heart" size={24} color="#4AA567" />
       </TouchableOpacity>
       <TouchableOpacity>
@@ -20,7 +20,7 @@ export function Footer() {
       <TouchableOpacity onPress={() => navigation.navigate("search")}>
         <FontAwesome5 name="search" size={24} color="#4AA567" />
       </TouchableOpacity>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate("profile")}>
         <FontAwesome5 name="user" size={24} color="#4AA567" />
       </TouchableOpacity>
     </View>

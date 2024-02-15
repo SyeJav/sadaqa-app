@@ -10,6 +10,7 @@ import { Signup } from "./Pages/Login/Signup";
 import { Home } from "./Pages/Home/Home";
 import { Search } from "./Pages/Search/Search";
 import { User } from "./Pages/Accounts/User";
+import { Favorites } from "./Pages/Favorites/Favorites";
 
 export default function App() {
   const [campaignsList, setCampaignsList] = useState([
@@ -74,6 +75,9 @@ export default function App() {
         </Stack.Screen>
         <Stack.Screen name="search">
           {() => <Search campaigns={campaignsList} />}
+        </Stack.Screen>
+        <Stack.Screen name="favorite">
+          {() => <Favorites campaigns={campaignsList} />}
         </Stack.Screen>
         <Stack.Screen name="user" component={User} />
         <Stack.Screen name="forgotpassword" component={ForgotPassword} />

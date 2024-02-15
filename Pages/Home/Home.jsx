@@ -1,14 +1,17 @@
-import { BodyArea } from "../../components/Body/Body";
 import { Footer } from "../../components/Footer/Footer";
 import { HeaderArea } from "../../components/Header/Header";
-import { Route, useRoute } from "@react-navigation/native";
+import { BodyArea } from "../../components/Body/Body";
+import { base } from "../../components/Root/Root.style";
+import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
 export function Home({ campaigns, navigation }) {
   return (
-    <>
-      <HeaderArea />
-      <BodyArea campaigns={campaigns} />
-      <Footer />
-    </>
+    <SafeAreaProvider>
+      <SafeAreaView style={base.container}>
+        <HeaderArea />
+        <BodyArea campaigns={campaigns} />
+        <Footer />
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 }
