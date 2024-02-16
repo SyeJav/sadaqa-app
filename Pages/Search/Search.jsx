@@ -7,12 +7,12 @@ import { HeaderArea } from "../../components/Header/Header";
 import { SearchBody } from "../../components/Body/Search/SearchBodyArea";
 import { base } from "../../components/Root/Root.style";
 
-export function Search({ campaigns }) {
+export function Search({ campaigns, onSubmitSearch }) {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={base.container}>
         <HeaderArea />
-        <SearchBody campaigns={campaigns} />
+        <SearchBody campaigns={campaigns} onSubmitSearch={onSubmitSearch} />
         <Footer />
       </SafeAreaView>
     </SafeAreaProvider>

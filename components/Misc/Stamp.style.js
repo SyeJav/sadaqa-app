@@ -2,9 +2,9 @@ import { StyleSheet } from "react-native";
 
 export const s = StyleSheet.create({
   stamp: {
-    margin: 15,
-    height: 100,
-    width: 100,
+    marginBottom: 20,
+    height: 90,
+    width: 90,
     backgroundColor: "#ADBC9F",
     borderRadius: 20,
     shadowColor: "#000",
@@ -18,7 +18,7 @@ export const s = StyleSheet.create({
     elevation: 10,
   },
   txt: {
-    flexDirection: "row",
+    textAlign: "center",
     justifyContent: "center",
     alignContent: "center",
     fontSize: 10,

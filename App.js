@@ -63,6 +63,10 @@ export default function App() {
     },
   };
 
+  function onSubmitSearch(text) {
+    alert(text);
+  }
+
   return (
     <NavigationContainer>
       <Stack.Navigator
@@ -74,7 +78,9 @@ export default function App() {
           {() => <Home campaigns={campaignsList} />}
         </Stack.Screen>
         <Stack.Screen name="search">
-          {() => <Search campaigns={campaignsList} />}
+          {() => (
+            <Search campaigns={campaignsList} onSubmitSearch={onSubmitSearch} />
+          )}
         </Stack.Screen>
         <Stack.Screen name="favorite">
           {() => <Favorites campaigns={campaignsList} />}

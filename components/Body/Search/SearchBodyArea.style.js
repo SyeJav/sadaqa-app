@@ -7,7 +7,14 @@ export const s = StyleSheet.create({
     padding: 10,
   },
   container: {
-    flex: 1,
-    flexDirection: "column",
+    height: 400,
+    flexDirection: "row",
+    flexWrap: "wrap",
+    alignItems: "flex-start",
+    justifyContent: "space-between",
+    paddingTop: 10,
+  },
+  searchBar: {
+    paddingBottom: 20,
   },
 });
