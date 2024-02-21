@@ -6,7 +6,7 @@ export const cardStyles = StyleSheet.create({
     flexDirection: "column",
     justifyContent: "space-evenly",
     borderRadius: 20,
-    height: 400,
+    height: 450,
   },
   img: {
     height: "40%",

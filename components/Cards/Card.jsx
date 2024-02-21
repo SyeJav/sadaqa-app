@@ -2,6 +2,7 @@ import { Image, Text, TouchableOpacity, View } from "react-native";
 import { cardStyles } from "./Card.style";
 import mosq1 from "../../assets/mosq1.jpg";
 import * as Progress from "react-native-progress";
+import { Button } from "../Button/Button";
 
 export function Card({ campaign }) {
   function getPercentage() {
@@ -23,6 +24,7 @@ export function Card({ campaign }) {
             color={"#4AA567"}
           />
         </View>
+        <Button>{"Donate"}</Button>
       </View>
     </View>
   );

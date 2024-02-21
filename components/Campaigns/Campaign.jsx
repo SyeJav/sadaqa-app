@@ -22,14 +22,14 @@ export function Campaign({ campaign }) {
   }
 
   return (
-    <>
+    <View style={styles.campaign}>
       <View style={styles.campaignTitle}>
         <Text style={styles.campaignTitleTxt}>{getTitle()}</Text>
-        <Text style={styles.campaignTitleStatus}>{campaign.type}</Text>
+        <Text style={styles.campaignType}>{campaign.type}</Text>
       </View>
-      <View style={cardStyles.cardItem}>
+      <View style={styles.campaignDetails}>
         <Card campaign={campaign} />
       </View>
-    </>
+    </View>
   );
 }

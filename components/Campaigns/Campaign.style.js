@@ -1,21 +1,27 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
+  campaign: {
+    flex: 1,
+    height: 500,
+    paddingTop: 10,
+  },
   campaignTitle: {
-    padding: 5,
+    flex: 0.5,
     flexDirection: "column",
     alignItems: "flex-start",
     justifyContent: "space-between",
-    paddingTop: 20,
-    paddingBottom: 10,
   },
   campaignTitleTxt: {
     fontSize: 20,
     fontWeight: "bold",
     color: "#4AA567",
   },
-  campaignTitleStatus: {
+  campaignType: {
     fontSize: 15,
     fontWeight: "bold",
+  },
+  campaignDetails: {
+    flex: 5,
   },
 });

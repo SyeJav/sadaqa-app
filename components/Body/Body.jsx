@@ -1,8 +1,8 @@
 import { bodyStyles } from "./Body.style";
-import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { Overview } from "./Overview/Overview";
 import { Campaign } from "../Campaigns/Campaign";
 import { ScrollView, View } from "react-native";
+import { base } from "../../components/Root/Root.style";
 
 export function BodyArea({ campaigns }) {
   function renderCampaignsList() {
@@ -11,13 +11,11 @@ export function BodyArea({ campaigns }) {
     ));
   }
   return (
-    <SafeAreaProvider>
-      <SafeAreaView style={bodyStyles.root}>
-        <View>
-          <Overview />
-          <ScrollView>{renderCampaignsList()}</ScrollView>
-        </View>
-      </SafeAreaView>
-    </SafeAreaProvider>
+    <View style={base.body}>
+      <View style={bodyStyles.root}>
+        <Overview />
+        <ScrollView>{renderCampaignsList()}</ScrollView>
+      </View>
+    </View>
   );
 }

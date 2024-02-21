@@ -4,7 +4,6 @@ export const s = StyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: "#F9F9F9",
-    padding: 10,
   },
   container: {
     height: 400,
@@ -13,8 +12,7 @@ export const s = StyleSheet.create({
     alignItems: "flex-start",
     justifyContent: "space-between",
     paddingTop: 10,
+    backgroundColor: "#e7e7e7",
   },
-  searchBar: {
-    paddingBottom: 20,
-  },
+  searchBar: {},
 });
